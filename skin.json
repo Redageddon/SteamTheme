@@ -1,0 +1,128 @@
+{
+    "name": "Redageddon",
+    "author": "redageddon",
+    "description": "Personal Steam theme.",
+    "version": "1.0.0",
+    "tags": ["Personal"],
+    "UseDefaultPatches": true,
+
+    "Conditions": {
+        "Color Accent": {
+            "description": "Recolor Steam's blue accents to Millennium's 'Override Accent Color'.",
+            "default": "yes",
+            "tab": "Settings",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": {
+                        "affects": [".*"],
+                        "src": "config/colorAccent/apply.css"
+                    }
+                }
+            }
+        },
+        "Custom Navigation Tabs": {
+            "description": "Replace Community with Workshop+Market. Add Points Shop next to Store. (REQUIRES JS ENABLED)",
+            "default": "yes",
+            "tab": "Settings",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": {
+                        "affects": ["^Steam$"],
+                        "src": "config/customTabs/nav_tabs.css"
+                    }
+                }
+            }
+        },
+        "Games-Per-Column": {
+            "description": "How many games should be in a single column.",
+            "default": "11",
+            "tab": "Settings",
+            "section": "Library",
+            "values": {
+                "7 (Steam Default)": {},
+                "11": {
+                    "TargetCss": {
+                        "affects": ["^Steam$"],
+                        "src": "config/gridSize/11.css"
+                    }
+                }
+            }
+        },
+        "Custom Games List": {
+            "description": "Changes the look of the games list.",
+            "default": "yes",
+            "tab": "Settings",
+            "section": "Library",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": {
+                        "affects": ["^Steam$"],
+                        "src": "config/customGamesList/enable.css"
+                    }
+                }
+            }
+        },
+        "Hide Shelf Dropdown": {
+            "description": "Hides the shelf (EX: favorite) dropdown row.",
+            "default": "yes",
+            "tab": "Settings",
+            "section": "Library - Shelves",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": {
+                        "affects": ["^Steam$"],
+                        "src": "config/favoritesBar/hide.css"
+                    }
+                }
+            }
+        },
+        "Hide 'Add Shelf' Button": {
+            "description": "Hides the 'Add shelf' row.",
+            "default": "yes",
+            "tab": "Settings",
+            "section": "Library - Shelves",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": {
+                        "affects": ["^Steam$"],
+                        "src": "config/addShelf/hide.css"
+                    }
+                }
+            }
+        },
+        "News container": {
+            "description": "Hide the 'What's New' block.",
+            "default": "Hide",
+            "tab": "Settings",
+            "values": {
+                "Show": {},
+                "Hide": {
+                    "TargetCss": {
+                        "affects": ["^Steam$"],
+                        "src": "config/newsContainer/hide.css"
+                    }
+                }
+            }
+        },
+        "Hide Wallet balance": {
+            "description": "Move wallet balance to the account dropdown.",
+            "default": "yes",
+            "tab": "Settings",
+            "section": "Userpannel",
+            "values": {
+                "no": {},
+                "yes": {
+                    "TargetCss": {
+                        "affects": ["^Steam$"],
+                        "src": "config/walletBalance/hide.css"
+                    }
+                }
+            }
+        }
+    }
+}

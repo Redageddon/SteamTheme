@@ -1,0 +1,83 @@
+/* Makes 11 games per column */
+._3vHkmRShhzwd67_MtEq8-n {
+    grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    gap: 10px 10px !important;
+    font-size: 22px !important;
+    padding-bottom: 6px !important;
+}
+
+/* Forces 2/3 ratio */
+._3vHkmRShhzwd67_MtEq8-n ._1pwP4eeP1zQD7PEgmsep0W {
+    min-width: 0 !important;
+    aspect-ratio: 2 / 3 !important;
+}
+
+/* Removes gap above Recent Games */
+.DGRkX_HYUzbFaqRysWQVi { height: auto !important; }
+
+/* Forces the Favorites + Recent container to be whole screen */
+._3BFcmjAaMyP6GTPwc0VyWi {
+    height: 100% !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+._2Dd4T78PcCTUVgOtDGFY5j,
+._2Nq6ov7A1hGcHXVOXNt_OE,
+._3VQUewWB8g6Z5qB4C7dGFr,
+._3lDczhulqraStjCitLYJ1K,
+._3lDczhulqraStjCitLYJ1K > div,
+._3Sb2o_mQ30IDRh0C72QUUu,
+._3Sb2o_mQ30IDRh0C72QUUu > div,
+._2Z9gJ6Pd7eZn-kfODcXJuR {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+/* Hides overflow gap underneath Recents */
+._3Sb2o_mQ30IDRh0C72QUUu {
+    overflow: hidden !important;
+}
+
+/* collection shelf keeps its natural height */
+._2Z9gJ6Pd7eZn-kfODcXJuR > ._2tC_c87MH67xQM7Y0pVyXm:has(.DGRkX_HYUzbFaqRysWQVi) {
+    flex: 0 0 auto !important;
+}
+
+/* recents shelf claims the leftover, and every wrapper relays it down */
+._2Z9gJ6Pd7eZn-kfODcXJuR > ._2tC_c87MH67xQM7Y0pVyXm:has(._1VMQWnw-9FBp-MVXUbWfS_),
+._2tC_c87MH67xQM7Y0pVyXm:has(._1VMQWnw-9FBp-MVXUbWfS_) > .V7RuDNUxhxoBRaiGWbk3B,
+._1VMQWnw-9FBp-MVXUbWfS_,
+._1VMQWnw-9FBp-MVXUbWfS_ > .SMWMsB-gz3WbYRK2HOm7i,
+._1VMQWnw-9FBp-MVXUbWfS_ > .SMWMsB-gz3WbYRK2HOm7i > div {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+/* Kill Steam's measured height on the row */
+._3fiHsLeD_6rtm6bM9lHlVL._1RLnyCu6_DW-NTlpHTBhig {
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* Kill Steam's measured height/width */
+._1esfEVxhqNfh8fzr_kEGKa > ._2XftMcBO9aY7VXCivzuW7- {
+    flex: 0 0 auto !important;
+    height: calc(100% - 2.2em) !important;
+    width: auto !important;
+    min-width: 0 !important;
+    aspect-ratio: 2 / 3 !important;
+}
+
+/* Heeps most recently played at the same aspect */
+._1esfEVxhqNfh8fzr_kEGKa:has(._3VOR2AeYATx3qSE0I-Pm-5) > ._2XftMcBO9aY7VXCivzuW7- {
+    aspect-ratio: 1.405 !important;
+}

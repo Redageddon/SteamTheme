@@ -1,0 +1,31 @@
+/* Active nav tab */
+._7AlhCx3XGzBeIrQaCneUD._1gqEjB5QsKT_NftD1dEsdZ,
+._7AlhCx3XGzBeIrQaCneUD._1gqEjB5QsKT_NftD1dEsdZ ._19axKcqYRuaJ8vdYKYmtTQ {
+    color: var(--SystemAccentColor) !important;
+    border-color: var(--SystemAccentColor) !important;
+}
+
+._1gqEjB5QsKT_NftD1dEsdZ ._19axKcqYRuaJ8vdYKYmtTQ::after {
+    background-color: var(--SystemAccentColor) !important;
+    background-image: none !important;
+}
+
+._7AlhCx3XGzBeIrQaCneUD._1gqEjB5QsKT_NftD1dEsdZ::before {
+    background-color: var(--SystemAccentColor) !important;
+    background-image: none !important;
+    border-color: var(--SystemAccentColor) !important;
+}
+
+/* Account name + online dot */
+._3yD46y5pd3zOGR7CzKs0mC.online { color: var(--SystemAccentColor) !important; }
+._3xUpb5DWXPFNcHHIcv-9pe.online { background-color: var(--SystemAccentColor) !important; }
+
+/* "New to library" badge */
+.N8aJrSpxQ6II4CY_aFdYI { background-color: var(--SystemAccentColor) !important; }
+
+/* Filter checkmark gradients */
+.SVGIcon_DialogCheck linearGradient stop:first-child { stop-color: var(--SystemAccentColor) !important; }
+
+/* still-blue stragglers */
+._1J21tLst5SEhBPkVRT53UV { color: var(--SystemAccentColor) !important; }
+._2iJsgdTIX9Tj23rWnB7Q-c { background-color: var(--SystemAccentColor) !important; }

@@ -1,0 +1,9 @@
+[data-nav-hidden] { display: none !important; }
+
+/* Suppress Steam's STORE highlight while a custom tab is selected */
+body[data-custom-nav-active] [data-nav-store] ._19axKcqYRuaJ8vdYKYmtTQ::after {
+    display: none !important;
+}
+body[data-custom-nav-active] [data-nav-store] ._19axKcqYRuaJ8vdYKYmtTQ {
+    color: var(--nav-inactive, #b8bcbf) !important;
+}

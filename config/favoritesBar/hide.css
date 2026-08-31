@@ -1,0 +1,7 @@
+._23SnllqT_AqZ1C_QHcNQ4Z {
+    display: none !important;
+}
+
+div:has(> ._23SnllqT_AqZ1C_QHcNQ4Z) {
+    display: none !important;
+}
