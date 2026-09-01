@@ -10,6 +10,7 @@
 /* Forces 2/3 ratio */
 ._3vHkmRShhzwd67_MtEq8-n ._1pwP4eeP1zQD7PEgmsep0W {
     min-width: 0 !important;
+    min-height: 0 !important;
     aspect-ratio: 2 / 3 !important;
 }
 
@@ -77,7 +78,7 @@
     aspect-ratio: 2 / 3 !important;
 }
 
-/* Heeps most recently played at the same aspect */
+/* Keeps most recently played at the same aspect */
 ._1esfEVxhqNfh8fzr_kEGKa:has(._3VOR2AeYATx3qSE0I-Pm-5) > ._2XftMcBO9aY7VXCivzuW7- {
     aspect-ratio: 1.405 !important;
 }
