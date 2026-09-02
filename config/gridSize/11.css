@@ -1,23 +1,28 @@
-/* Makes 11 games per column */
-._3vHkmRShhzwd67_MtEq8-n {
-    grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
-    grid-auto-rows: auto !important;
-    gap: 10px 10px !important;
-    font-size: 22px !important;
-    padding-bottom: 6px !important;
-}
+/*
+ . *_3BFcmjAaMyP6GTPwc0VyWi                                                           -> All Shelves container
+ ._2Dd4T78PcCTUVgOtDGFY5j,                                                          -> Part of Favorites Shelf
+ ._2Nq6ov7A1hGcHXVOXNt_OE,                                                          -> Part of Favorites Shelf
+ ._3VQUewWB8g6Z5qB4C7dGFr,                                                          -> Part of Favorites Shelf
+ ._3lDczhulqraStjCitLYJ1K,                                                          -> Part of Favorites Shelf
+ ._3lDczhulqraStjCitLYJ1K > div,                                                    -> Part of Favorites Shelf
+ ._3Sb2o_mQ30IDRh0C72QUUu,                                                          -> Part of Favorites Shelf
+ ._3Sb2o_mQ30IDRh0C72QUUu > div,                                                    -> Part of Favorites Shelf
+ ._2Z9gJ6Pd7eZn-kfODcXJuR                                                           -> Part of Favorites Shelf
+ .DGRkX_HYUzbFaqRysWQVi                                                             -> Favorites Shelf container
+ .DGRkX_HYUzbFaqRysWQVi ._3vHkmRShhzwd67_MtEq8-n                                    -> Favorites Shelf
+ .DGRkX_HYUzbFaqRysWQVi ._3vHkmRShhzwd67_MtEq8-n ._1pwP4eeP1zQD7PEgmsep0W           -> Individual game in Favorites Shelf
+ ._2Z9gJ6Pd7eZn-kfODcXJuR > ._2tC_c87MH67xQM7Y0pVyXm:has(.DGRkX_HYUzbFaqRysWQVi)    -> Outer favorites Shelf
+ ._2Z9gJ6Pd7eZn-kfODcXJuR > ._2tC_c87MH67xQM7Y0pVyXm:has(._1VMQWnw-9FBp-MVXUbWfS_), -> Part of Recents Shelf
+ ._2tC_c87MH67xQM7Y0pVyXm:has(._1VMQWnw-9FBp-MVXUbWfS_) > .V7RuDNUxhxoBRaiGWbk3B,   -> Part of Recents Shelf
+ ._1VMQWnw-9FBp-MVXUbWfS_,                                                          -> Part of Recents Shelf
+ ._1VMQWnw-9FBp-MVXUbWfS_ > .SMWMsB-gz3WbYRK2HOm7i,                                 -> Part of Recents Shelf
+ ._1VMQWnw-9FBp-MVXUbWfS_ > .SMWMsB-gz3WbYRK2HOm7i > div                            -> Part of Recents Shelf
+ ._1RLnyCu6_DW-NTlpHTBhig                                                           -> Recents Shelf game containers
+ ._1esfEVxhqNfh8fzr_kEGKa:has(._3VOR2AeYATx3qSE0I-Pm-5) > ._2XftMcBO9aY7VXCivzuW7-  -> Most Recent / First Game, in Recents Shelf
+ ._1esfEVxhqNfh8fzr_kEGKa > ._2XftMcBO9aY7VXCivzuW7-                                -> Individual game in Recents Shelf
+ */
 
-/* Forces 2/3 ratio */
-._3vHkmRShhzwd67_MtEq8-n ._1pwP4eeP1zQD7PEgmsep0W {
-    min-width: 0 !important;
-    min-height: 0 !important;
-    aspect-ratio: 2 / 3 !important;
-}
-
-/* Removes gap above Recent Games */
-.DGRkX_HYUzbFaqRysWQVi { height: auto !important; }
-
-/* Forces the Favorites + Recent container to be whole screen */
+/* Forces the Shelves container to be whole screen */
 ._3BFcmjAaMyP6GTPwc0VyWi {
     height: 100% !important;
     min-height: 0 !important;
@@ -39,14 +44,30 @@
     height: auto !important;
 }
 
-/* Hides overflow gap underneath Recents */
-._3Sb2o_mQ30IDRh0C72QUUu {
-    overflow: hidden !important;
+/* Removes gap above Recent Games */
+.DGRkX_HYUzbFaqRysWQVi {
+    height: auto !important;
 }
 
 /* collection shelf keeps its natural height */
 ._2Z9gJ6Pd7eZn-kfODcXJuR > ._2tC_c87MH67xQM7Y0pVyXm:has(.DGRkX_HYUzbFaqRysWQVi) {
     flex: 0 0 auto !important;
+}
+
+/* Makes 11 games per column */
+.DGRkX_HYUzbFaqRysWQVi ._3vHkmRShhzwd67_MtEq8-n {
+    grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    gap: 10px 10px !important;
+    font-size: 22px !important;
+    padding-bottom: 6px !important;
+}
+
+/* Forces 2/3 ratio */
+.DGRkX_HYUzbFaqRysWQVi ._3vHkmRShhzwd67_MtEq8-n ._1pwP4eeP1zQD7PEgmsep0W {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    aspect-ratio: 2 / 3 !important;
 }
 
 /* recents shelf claims the leftover, and every wrapper relays it down */
@@ -63,10 +84,15 @@
 }
 
 /* Kill Steam's measured height on the row */
-._3fiHsLeD_6rtm6bM9lHlVL._1RLnyCu6_DW-NTlpHTBhig {
+._1RLnyCu6_DW-NTlpHTBhig {
     flex: 1 1 auto !important;
     height: auto !important;
     min-height: 0 !important;
+}
+
+/* Keeps most recently played at the same aspect */
+._1esfEVxhqNfh8fzr_kEGKa:has(._3VOR2AeYATx3qSE0I-Pm-5) > ._2XftMcBO9aY7VXCivzuW7- {
+    aspect-ratio: 1.405 !important;
 }
 
 /* Kill Steam's measured height/width */
@@ -76,9 +102,4 @@
     width: auto !important;
     min-width: 0 !important;
     aspect-ratio: 2 / 3 !important;
-}
-
-/* Keeps most recently played at the same aspect */
-._1esfEVxhqNfh8fzr_kEGKa:has(._3VOR2AeYATx3qSE0I-Pm-5) > ._2XftMcBO9aY7VXCivzuW7- {
-    aspect-ratio: 1.405 !important;
 }
