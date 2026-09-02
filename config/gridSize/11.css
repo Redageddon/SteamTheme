@@ -70,6 +70,11 @@
     aspect-ratio: 2 / 3 !important;
 }
 
+/* Forces steam to not cut off items at smaller screen sizes. */
+.CSSGrid_Measure {
+    width: 175% !important;
+}
+
 /* recents shelf claims the leftover, and every wrapper relays it down */
 ._2Z9gJ6Pd7eZn-kfODcXJuR > ._2tC_c87MH67xQM7Y0pVyXm:has(._1VMQWnw-9FBp-MVXUbWfS_),
 ._2tC_c87MH67xQM7Y0pVyXm:has(._1VMQWnw-9FBp-MVXUbWfS_) > .V7RuDNUxhxoBRaiGWbk3B,
