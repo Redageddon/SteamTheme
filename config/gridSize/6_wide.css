@@ -1,0 +1,129 @@
+/* ==========================================================================
+ *  Games-Per-Column: 6 (wide)
+ *  --------------------------------------------------------------------------
+ *  Structurally identical to 11.css. Only the collection grid's column count,
+ *  the tile aspect ratio and the CSSGrid_Measure hack differ.
+ *
+ *  This file ALSO doubles as the on/off flag for the wide-cover image swap in
+ *  libraryroot.custom.js, which looks for a stylesheet whose href contains
+ *  "6_wide.css". DO NOT RENAME IT without updating wideEnabled() in the JS.
+ *
+ *  The Recents shelf rules at the bottom are carried over unchanged from
+ *  11.css; they are load-bearing for the "favorites keeps natural height,
+ *  recents claims the leftover" layout, not a change to the recents row.
+ *  ========================================================================== */
+
+/* Forces the Shelves container to be whole screen */
+._3BFcmjAaMyP6GTPwc0VyWi {
+    height: 100% !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+._2Dd4T78PcCTUVgOtDGFY5j,
+._2Nq6ov7A1hGcHXVOXNt_OE,
+._3VQUewWB8g6Z5qB4C7dGFr,
+._3lDczhulqraStjCitLYJ1K,
+._3lDczhulqraStjCitLYJ1K > div,
+._3Sb2o_mQ30IDRh0C72QUUu,
+._3Sb2o_mQ30IDRh0C72QUUu > div,
+._2Z9gJ6Pd7eZn-kfODcXJuR {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+/* Removes gap above Recent Games */
+.DGRkX_HYUzbFaqRysWQVi {
+    height: auto !important;
+}
+
+/* collection shelf keeps its natural height */
+._2Z9gJ6Pd7eZn-kfODcXJuR > ._2tC_c87MH67xQM7Y0pVyXm:has(.DGRkX_HYUzbFaqRysWQVi) {
+    flex: 0 0 auto !important;
+}
+
+/* Makes 6 games per column */
+.DGRkX_HYUzbFaqRysWQVi ._3vHkmRShhzwd67_MtEq8-n {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    gap: 10px 10px !important;
+    font-size: 22px !important;
+    padding-bottom: 6px !important;
+}
+
+/* Forces the 460x215 header ratio */
+.DGRkX_HYUzbFaqRysWQVi ._3vHkmRShhzwd67_MtEq8-n ._1pwP4eeP1zQD7PEgmsep0W {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    aspect-ratio: 460 / 215 !important;
+}
+
+/* Steam's image wrapper still enforces its portrait (2:3) capsule box inside
+ *  the tile, which crops the wide art down to a zoomed centre slice. Make the
+ *  wrapper fill the tile so the header art has the right box to sit in. */
+.DGRkX_HYUzbFaqRysWQVi [role="gridcell"] ._1R9r2OBCxAmtuUVrgBEUBw {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+}
+
+/* Header art is 460x215, which matches the tile ratio above exactly, so this
+ *  fills edge to edge with no crop. Games with no wide art fall back to their
+ *  portrait capsule and get centre-cropped instead of squashed.
+ *  If anything still looks cut off, swap cover -> contain: the headers will
+ *  look identical and the portrait fallbacks will letterbox rather than crop. */
+.DGRkX_HYUzbFaqRysWQVi [role="gridcell"] img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+/* 11.css inflates this to 175% because it forces MORE columns than Steam's
+ *  own auto-fill measurement expects. At 6 columns we force FEWER, so the
+ *  measurement is already generous and the hack is not needed.
+ *  If tiles start disappearing while scrolling, raise this to 125-150%. */
+.CSSGrid_Measure {
+    width: 100% !important;
+}
+
+/* recents shelf claims the leftover, and every wrapper relays it down */
+._2Z9gJ6Pd7eZn-kfODcXJuR > ._2tC_c87MH67xQM7Y0pVyXm:has(._1VMQWnw-9FBp-MVXUbWfS_),
+._2tC_c87MH67xQM7Y0pVyXm:has(._1VMQWnw-9FBp-MVXUbWfS_) > .V7RuDNUxhxoBRaiGWbk3B,
+._1VMQWnw-9FBp-MVXUbWfS_,
+._1VMQWnw-9FBp-MVXUbWfS_ > .SMWMsB-gz3WbYRK2HOm7i,
+._1VMQWnw-9FBp-MVXUbWfS_ > .SMWMsB-gz3WbYRK2HOm7i > div {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+/* Kill Steam's measured height on the row */
+._1RLnyCu6_DW-NTlpHTBhig {
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* Keeps most recently played at the same aspect */
+._1esfEVxhqNfh8fzr_kEGKa:has(._3VOR2AeYATx3qSE0I-Pm-5) > ._2XftMcBO9aY7VXCivzuW7- {
+    aspect-ratio: 1.405 !important;
+}
+
+/* Kill Steam's measured height/width */
+._1esfEVxhqNfh8fzr_kEGKa > ._2XftMcBO9aY7VXCivzuW7- {
+    flex: 0 0 auto !important;
+    height: calc(100% - 2.2em) !important;
+    width: auto !important;
+    min-width: 0 !important;
+    aspect-ratio: 2 / 3 !important;
+}

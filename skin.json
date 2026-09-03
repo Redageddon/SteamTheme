@@ -2,7 +2,7 @@
     "name": "Redageddon",
     "author": "redageddon",
     "description": "Personal Steam theme.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "tags": ["Personal"],
     "UseDefaultPatches": true,
 
@@ -36,12 +36,18 @@
             }
         },
         "Games-Per-Column": {
-            "description": "How many games should be in a single column.",
+            "description": "How many games should be in a single column. '6 (Wide)' also switches the shelf to horizontal header art. (WIDE REQUIRES JS ENABLED)",
             "default": "11",
             "tab": "Settings",
             "section": "Library",
             "values": {
                 "7 (Steam Default)": {},
+                "6 (Wide)": {
+                    "TargetCss": {
+                        "affects": ["^Steam$"],
+                        "src": "config/gridSize/6_wide.css"
+                    }
+                },
                 "11": {
                     "TargetCss": {
                         "affects": ["^Steam$"],
